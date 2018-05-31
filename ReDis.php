@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @autor <angelluismarino@gmail.com>
+ *
+ */
+ 
 class RedDis
 {
     public $redis;
@@ -37,7 +41,7 @@ class RedDis
     }
 
     function getkeys(){
-        # Recuperando el valor de redis
+        # Recuperando todos los valores de redis
         try{
             return $this->redis->keys('*');
         } catch( Exception $e ){
@@ -67,6 +71,4 @@ class RedDis
             echo $e->getMessage();
         }
     }
-
-
 }
